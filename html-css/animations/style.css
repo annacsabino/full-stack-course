@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  /* pink */
+  --pink-light: ##c59dd2;
+  --pink-base: #9547a5;
+  --pink-dark: #7d298a;
+  --pink-low: #3f0f41;
+
+  /* blue */
+  --blue-light: #73b6d2;
+  --blue-base: #358bb9;
+  --blue-mid: #2374a4;
+  --blue-dark: #144a72;
+  --blue-low: #08233c;
+
+  /* shape */
+  --shape-stroke: #002347;
+  --shape-hover: #001933;
+  --shape-base: #000f1f;
+  --shape-background: #00050a;
+
+  /* text */
+  --text-title: #f8fbfb;
+  --text-body: #e2e7e9;
+  --text-label: #bac6c9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--shape-background);
+  color: var(--text-title);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 140%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(70rem + 2rem);
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+header {
+  min-height: 87vh;
+  padding-top: 3.5rem;
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/hero.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  animation: opacity-header 1.5s ease-in-out;
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: var(--pink-dark);
+  color: var(--text-title);
+  &:hover {
+    background-color: var(--pink-base);
+  }
+}
+
+.content-header {
+  margin-top: 10.25rem;
+  animation: opacity-title 3.5s ease-in-out;
+  font-weight: 700;
+  max-width: 41rem;
+  text-align: center;
+  & h1 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+  & p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-body);
+  }
+}
+
+@keyframes opacity-header {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-title {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
