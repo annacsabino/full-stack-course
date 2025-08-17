@@ -1,0 +1,74 @@
+.content-description {
+  padding-top: 11rem;
+  padding-bottom: 8rem;
+  .description-wrapper {
+    position: relative;
+    h2 {
+      .phrase-one,
+      .phrase-two,
+      .phrase-three {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 200%;
+        font-weight: 500;
+        opacity: 0.2;
+        color: var(--text-title);
+        animation-name: description-phrase;
+        animation-timing-function: steps(1);
+        animation-timeline: view();
+        animation-fill-mode: both;
+        span {
+          animation-name: description-span;
+          animation-timing-function: steps(1);
+          animation-timeline: view();
+          animation-fill-mode: both;
+          font-weight: 700;
+          color: var(--text-title);
+        }
+      }
+      .phrase-one {
+        animation-range: entry 200px cover 300px;
+        span {
+          animation-range: entry 200px cover 300px;
+        }
+      }
+
+      .phrase-two {
+        animation-range: entry 300px cover 400px;
+        span {
+          animation-range: entry 300px cover 400px;
+        }
+      }
+      .phrase-three {
+        animation-range: entry 400px cover 500px;
+        span {
+          animation-range: entry 400px cover 500px;
+        }
+      }
+    }
+    .images-symbols {
+      img {
+        position: absolute;
+        animation: description-image 0.5s linear both;
+        animation-timeline: view();
+        /* animation-name: description-image;
+        animation-fill-mode: both; */
+      }
+      img:nth-child(1) {
+        bottom: -80px;
+        left: 0;
+        animation-range: entry 50% cover 80%;
+      }
+      img:nth-child(2) {
+        bottom: -80px;
+        right: -20px;
+        animation-range: entry 45% cover 75%;
+      }
+      img:nth-child(3) {
+        top: -100px;
+        left: calc(50% - 4rem);
+        animation-range: entry 40% cover 70%;
+      }
+    }
+  }
+}

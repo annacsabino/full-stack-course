@@ -7,7 +7,7 @@
 
 :root {
   /* pink */
-  --pink-light: ##c59dd2;
+  --pink-light: #c59dd2;
   --pink-base: #9547a5;
   --pink-dark: #7d298a;
   --pink-low: #3f0f41;
@@ -58,37 +58,9 @@ a {
 }
 
 .container {
-  max-width: calc(70rem + 2rem);
+  max-width: calc(72rem + 2rem);
   padding: 0 1rem;
   margin: 0 auto;
-}
-
-header {
-  min-height: 87vh;
-  padding-top: 3.5rem;
-  position: relative;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('./assets/hero.png');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  animation: opacity-header 1.5s ease-in-out;
-  z-index: -1;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
 }
 
 .btn {
@@ -106,43 +78,5 @@ nav {
   color: var(--text-title);
   &:hover {
     background-color: var(--pink-base);
-  }
-}
-
-.content-header {
-  margin-top: 10.25rem;
-  animation: opacity-title 3.5s ease-in-out;
-  font-weight: 700;
-  max-width: 41rem;
-  text-align: center;
-  & h1 {
-    font-size: 3rem;
-    padding-bottom: 2rem;
-  }
-  & p {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: var(--text-body);
-  }
-}
-
-@keyframes opacity-header {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacity-title {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }

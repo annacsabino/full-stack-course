@@ -1,0 +1,87 @@
+.content-kit {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -40px;
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(../assets/star.svg);
+      background-size: cover;
+      margin: 1rem auto;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -40px;
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(../assets/star.svg);
+      background-size: cover;
+      margin: 1rem auto;
+    }
+  }
+  p {
+    color: var(--text-body);
+    margin-top: 5px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.book-principal-image {
+  margin: 10rem 0;
+  position: relative;
+}
+
+.kit-images {
+  img {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    object-fit: contain;
+    max-height: 35rem;
+
+    animation-duration: auto;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    z-index: -1;
+  }
+  img:nth-child(1) {
+    top: 20px;
+    left: 140px;
+    transform: rotate(-22deg);
+    transition: all 0.5s ease-in-out;
+  }
+  img:nth-child(2) {
+    top: 0px;
+    left: 140px;
+    transform: rotate(-10deg);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.book-principal-image img:hover ~ .kit-images img:nth-child(1) {
+  top: 20px;
+  left: 380px;
+  transform: rotate(0deg);
+}
+
+.book-principal-image img:hover ~ .kit-images img:nth-child(2) {
+  top: -100px;
+  left: 270px;
+  transform: rotate(0deg);
+}
